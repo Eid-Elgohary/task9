@@ -19,6 +19,13 @@ namespace P02_SalesDatabase.Data.EntityConfiguration
                 .IsUnicode(true)
                 .IsRequired(true);
 
+            builder.Property(p => p.Description)
+                .HasMaxLength(250)
+                .HasDefaultValue("no description")
+                .IsUnicode(true)
+                .IsRequired(true);
+                
+
             builder.Property(p => p.Quantity)
                 .HasColumnType("decimal(10,2)")
                 .IsRequired(true);

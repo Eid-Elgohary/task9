@@ -14,6 +14,7 @@ namespace P02_SalesDatabase.Data.EntityConfiguration
                 .IsRequired(true);
 
             builder.Property(sa => sa.Date)
+                .HasDefaultValueSql("GETDATE()")
                 .IsRequired(true);
 
             builder.HasOne(sa => sa.Product)
